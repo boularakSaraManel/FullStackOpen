@@ -1,6 +1,14 @@
+```mermaid
 sequenceDiagram
     participant browser
     participant server
+
+    browser->>server: POST https://studies.cs.helsinki.fi/exampleapp/notes/new_note body:[{"note":"sarra's note"}]
+    activate server
+    Note right of server: The server adds the note to the notes list
+    server-->>browser: redirect (302) to notes page 
+    deactivate server
+    
 
     browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/notes
     activate server
@@ -25,3 +33,5 @@ sequenceDiagram
     deactivate server
 
     Note right of browser: The browser executes the callback function that renders the notes
+
+```
