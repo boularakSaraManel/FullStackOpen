@@ -9,7 +9,6 @@ sequenceDiagram
     server-->>browser: redirect (302) to notes page 
     deactivate server
     
-
     browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/notes
     activate server
     server-->>browser: HTML document
