@@ -9,7 +9,7 @@ sequenceDiagram
     deactivate server
 
 
-    Note right of browser: The server adds the note to the JSON notes list and redraws the notes
+    Note right of browser: The JavaScript adds the note to the JSON notes list and redraws the notes
 
     browser->>server: POST https://studies.cs.helsinki.fi/exampleapp/notes/new_note_spa body:[{"content": "new note spa","date": "2024-08-26T23:18:11.907Z"}] 
     activate server
