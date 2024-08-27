@@ -5,7 +5,7 @@ sequenceDiagram
 
     browser->>server: POST https://studies.cs.helsinki.fi/exampleapp/notes/new_note body:[{"note":"sarra's note"}]
     activate server
-    Note right of server: The server adds the note to the notes list
+    Note right of browser: The server adds the note to the notes list
     server-->>browser: redirect (302) to notes page 
     deactivate server
     
