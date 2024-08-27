@@ -10,7 +10,7 @@ sequenceDiagram
 
     browser->>server: POST https://studies.cs.helsinki.fi/exampleapp/notes/new_note_spa body:[{"content": "new note spa","date": "2024-08-26T23:18:11.907Z"}] 
     activate server
-    server-->>browser: server sends (201) created http code 
+    server-->>browser: server creates the note and sends (201) created http code 
     deactivate server
 
 ```
