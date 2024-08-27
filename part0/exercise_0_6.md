@@ -3,7 +3,8 @@ sequenceDiagram
     participant browser
     participant server
 
-    browser->>server: User submits note : [{"note": "new note spa"}] 
+    browser->>server: User submits note : [{"note": "new note spa"}]
+    activate server
     server->>browser: JavaScript blocks the default submit and creates a new note :[{"content": "new note spa","date": "2024-08-26T23:18:11.907Z"}]
 
     Note right of browser: The server adds the note to the JSON notes list and redraws the notes
